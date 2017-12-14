@@ -1,23 +1,23 @@
 package com.txx.entity.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 帅气的创建
  * <p>
- * <p>
+ * <p>考试信息表
  * feature;
  */
-public class Student implements Serializable{
+public class Exam implements Serializable{
 
-    private static final long serialVersionUID = 1198042996613604651L;
+    private static final long serialVersionUID = -3472028699094699002L;
 
     private Long id;
     private String name;
-    private Integer age;
-    private Integer sex;
     private Long clbumId;
-    private Integer level;
+    private Date time;
+    private Integer important;
 
     public Long getId() {
         return id;
@@ -35,22 +35,6 @@ public class Student implements Serializable{
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public Integer getSex() {
-        return sex;
-    }
-
-    public void setSex(Integer sex) {
-        this.sex = sex;
-    }
-
     public Long getClbumId() {
         return clbumId;
     }
@@ -59,11 +43,19 @@ public class Student implements Serializable{
         this.clbumId = clbumId;
     }
 
-    public Integer getLevel() {
-        return level;
+    public Date getTime() {
+        return time;
     }
 
-    public void setLevel(Integer level) {
-        this.level = level;
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
+    public Integer getImportant() {
+        return important;
+    }
+
+    public void setImportant(Integer important) {
+        this.important = important;
     }
 }
