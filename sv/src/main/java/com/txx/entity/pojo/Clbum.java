@@ -8,15 +8,16 @@ import java.io.Serializable;
  * <p>
  * feature;
  */
-public class Clbum implements Serializable{
+public class Clbum implements Serializable {
 
     private static final long serialVersionUID = -3242016195295543471L;
 
-    private Long  id;
-    private String name;
-    private Integer grade;
-    private Integer txxclass;
-    private Integer year;
+    private Long id;
+    private String name;//班级名称
+    private Integer grade;//年级
+    private Integer txxclass;//班级
+    private Integer year;//年份
+    private Integer studentNum;//班级人数
 
     public Long getId() {
         return id;
@@ -56,5 +57,13 @@ public class Clbum implements Serializable{
 
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    public Integer getStudentNum() {
+        return studentNum;
+    }
+
+    public void setStudentNum(Integer studentNum) {
+        this.studentNum = studentNum;
     }
 }
