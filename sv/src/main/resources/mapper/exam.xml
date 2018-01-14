@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.txx.dao.ExamDao">
+    <insert id="addExam" parameterType="com.txx.entity.dto.ExamDto">
+         INSERT INTO
+         t_exam(name,clbum_id,time,important)
+         VALUES
+         (#{name},#{clbumId},#{time},#(important))
+    </insert>
+
+    <select id="getExamByClbumId" parameterType="com.txx.entity.dto.ExamDto" resultType="com.txx.entity.vo.ExamVo">
+        SELECT * from t_exam
+        <where>
+            <if test="startDate!=null">
+              AND  <![CDATA[  time>=#{startDate} ]]>
+            </if>
+            <if test="endDate!=null">
+                AND  <![CDATA[  time<=#{endDate} ]]>
+            </if>
+            <if test="clbumId!=null">
+                AND clbum_id=#{clbumId}
+            </if>
+            <if test="important!=null">
+                AND  important=#{important}
+            </if>
+            <if test="name!=null and name!=''">
+                AND   name=#{name}
+            </if>
+        </where>
+    </select>
+</mapper>
