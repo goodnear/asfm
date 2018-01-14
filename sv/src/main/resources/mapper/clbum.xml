@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.txx.dao.ClbumDao">
+    <insert id="addClbum" parameterType="com.txx.entity.pojo.Clbum" useGeneratedKeys="true" keyProperty="id">
+       INSERT INTO t_clbum (name,grade,txxclass,year,student_num)
+       VALUES
+       (#{name},#{grade},#{txxclass},#{year},#{student_num})
+   </insert>
+
+    <update id="updateClbum" parameterType="com.txx.entity.pojo.Clbum">
+        UPDATE t_clbum
+        <set>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="grade!=null">
+                grade=#{grade},
+            </if>
+            <if test="txxclass!=null">
+                txxclass=#{txxclass},
+            </if>
+            <if test="year!=null">
+                year=#{year},
+            </if>
+            <if test="student_num!=null">
+                student_num=#{studentNum}
+            </if>
+        </set>
+    </update>
+
+</mapper>
