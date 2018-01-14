@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 帅气的创建
- * <p>
+ * <p>班级类
  * <p>
  * feature;
  */

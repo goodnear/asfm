@@ -15,7 +15,7 @@ public class Exam implements Serializable{
 
     private Long id;
     private String name;
-    private Long clbumId;
+    private Long clbumId;//考试所属班级
     private Date time;
     private Integer important;
 

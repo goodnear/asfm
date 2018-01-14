@@ -3,7 +3,6 @@
  */
 $.fn.serializeObject = function()
 {
-    debugger;
     var o = {};
     var a = this.serializeArray();
     $.each(a, function() {

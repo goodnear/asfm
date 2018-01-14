@@ -16,8 +16,8 @@ public class Student implements Serializable{
     private String name;
     private Integer age;
     private Integer sex;
-    private Long clbumId;
-    private Integer level;
+    private Long clbumId;//所属班级
+    private Integer level;//学生成绩级别
 
     public Long getId() {
         return id;
