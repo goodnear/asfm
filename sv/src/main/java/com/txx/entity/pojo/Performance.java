@@ -14,10 +14,11 @@ public class Performance implements Serializable{
     private static final long serialVersionUID = 4712979160670005529L;
 
     private Integer Id;
-    private Long studentId;
-    private Integer score;
-    private Long classrRank;
+    private String studentName;
+    private Integer totalScore;
+    private Long classRank;
     private Long schoolRank;
+    private Long examId;//哪次考试
     private int chinese;
     private int math;
     private int english;
@@ -33,7 +34,6 @@ public class Performance implements Serializable{
     private int reserved4;//预留科目4
     private int reserved5;//预留科目5
     private int reserved6;//预留科目6
-    private Long examId;//哪次考试
 
     public Integer getId() {
         return Id;
@@ -43,29 +43,12 @@ public class Performance implements Serializable{
         Id = id;
     }
 
-    public Long getStudentId() {
-        return studentId;
+    public Integer getTotalScore() {
+        return totalScore;
     }
 
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
-    }
-
-    public Integer getScore() {
-        return score;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
-
-
-    public Long getClassrRank() {
-        return classrRank;
-    }
-
-    public void setClassrRank(Long classrRank) {
-        this.classrRank = classrRank;
+    public void setTotalScore(Integer totalScore) {
+        this.totalScore = totalScore;
     }
 
     public Long getSchoolRank() {
@@ -82,5 +65,141 @@ public class Performance implements Serializable{
 
     public void setExamId(Long examId) {
         this.examId = examId;
+    }
+
+    public int getChinese() {
+        return chinese;
+    }
+
+    public void setChinese(int chinese) {
+        this.chinese = chinese;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
+        this.math = math;
+    }
+
+    public int getEnglish() {
+        return english;
+    }
+
+    public void setEnglish(int english) {
+        this.english = english;
+    }
+
+    public int getPolitics() {
+        return politics;
+    }
+
+    public void setPolitics(int politics) {
+        this.politics = politics;
+    }
+
+    public int getHistory() {
+        return history;
+    }
+
+    public void setHistory(int history) {
+        this.history = history;
+    }
+
+    public int getGeography() {
+        return geography;
+    }
+
+    public void setGeography(int geography) {
+        this.geography = geography;
+    }
+
+    public int getPhysics() {
+        return physics;
+    }
+
+    public void setPhysics(int physics) {
+        this.physics = physics;
+    }
+
+    public int getChemistry() {
+        return chemistry;
+    }
+
+    public void setChemistry(int chemistry) {
+        this.chemistry = chemistry;
+    }
+
+    public int getBiology() {
+        return biology;
+    }
+
+    public void setBiology(int biology) {
+        this.biology = biology;
+    }
+
+    public int getReserved1() {
+        return reserved1;
+    }
+
+    public void setReserved1(int reserved1) {
+        this.reserved1 = reserved1;
+    }
+
+    public int getReserved2() {
+        return reserved2;
+    }
+
+    public void setReserved2(int reserved2) {
+        this.reserved2 = reserved2;
+    }
+
+    public int getReserved3() {
+        return reserved3;
+    }
+
+    public void setReserved3(int reserved3) {
+        this.reserved3 = reserved3;
+    }
+
+    public int getReserved4() {
+        return reserved4;
+    }
+
+    public void setReserved4(int reserved4) {
+        this.reserved4 = reserved4;
+    }
+
+    public int getReserved5() {
+        return reserved5;
+    }
+
+    public void setReserved5(int reserved5) {
+        this.reserved5 = reserved5;
+    }
+
+    public int getReserved6() {
+        return reserved6;
+    }
+
+    public void setReserved6(int reserved6) {
+        this.reserved6 = reserved6;
+    }
+
+    public Long getClassRank() {
+        return classRank;
+    }
+
+    public void setClassRank(Long classRank) {
+        this.classRank = classRank;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 }
